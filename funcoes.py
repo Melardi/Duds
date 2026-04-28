@@ -27,3 +27,23 @@ def guardar_dado(lista_dados_rolados, lista_dados_guardados, indice_dado_para_gu
     lista_resultado = [nova_lista_dados_rolados, lista_dados_guardados]
 
     return lista_resultado
+
+
+
+
+
+
+def remover_dado(lista_dados_rolados, lista_dados_guardados, indice_dado_para_remover):
+
+    valor_dado_para_remover = lista_dados_guardados[indice_dado_para_remover]
+
+    nova_lista_dados_guardados = []
+    for i in range(len(lista_dados_guardados)):
+        if i != indice_dado_para_remover:
+            nova_lista_dados_guardados.append(lista_dados_guardados[i])
+    
+    lista_dados_rolados.append(valor_dado_para_remover)
+
+    lista_resultado = [lista_dados_rolados, nova_lista_dados_guardados]
+
+    return lista_resultado
