@@ -110,3 +110,27 @@ def calcula_pontos_sequencia_alta(lista_dados_rolados):
             return 30
     
     return 0
+
+
+
+
+
+
+def calcula_pontos_full_house(lista_dados_rolados):
+    contagens = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+
+    for i in range(len(lista_dados_rolados)):
+        face = lista_dados_rolados[i]
+        contagens[face] = contagens[face] + 1
+    
+    for face1 in contagens:
+        if contagens[face1] == 3:
+            for face2 in contagens:
+                if contagens[face2] == 2:
+                    
+                    soma = 0
+                    for i in range(len(lista_dados_rolados)):
+                        soma = soma + lista_dados_rolados[i]
+                    return soma
+    
+    return 0
