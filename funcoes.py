@@ -80,3 +80,16 @@ def calcula_pontos_soma(lista_dados_rolados):
 
 
 
+def calcula_pontos_sequencia_baixa(lista_dados_rolados):
+    sequencias = [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]]
+
+    for seq in sequencias:
+        contador = 0
+        for valor in seq:
+            if valor in lista_dados_rolados:
+                contador += 1
+        if contador == 4:
+            return 15
+
+    return 0
+
