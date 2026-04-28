@@ -93,3 +93,20 @@ def calcula_pontos_sequencia_baixa(lista_dados_rolados):
 
     return 0
 
+
+
+
+
+
+def calcula_pontos_sequencia_alta(lista_dados_rolados):
+    sequencias = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6]]
+
+    for seq in sequencias:
+        contador = 0
+        for valor in seq:
+            if valor in lista_dados_rolados:
+                contador += 1
+        if contador == 5:
+            return 30
+    
+    return 0
