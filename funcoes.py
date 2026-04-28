@@ -134,3 +134,25 @@ def calcula_pontos_full_house(lista_dados_rolados):
                     return soma
     
     return 0
+
+
+
+
+
+
+
+def calcula_pontos_quadra(dados_rolados):
+    contagens = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    for i in range(len(dados_rolados)):
+        face = dados_rolados[i]
+        contagens[face] = contagens[face] + 1
+    
+    for face in contagens:
+        if contagens[face] >= 4:
+
+            soma = 0
+            for i in range(len(dados_rolados)):
+                soma = soma + dados_rolados[i]
+            return soma
+    
+    return 0
