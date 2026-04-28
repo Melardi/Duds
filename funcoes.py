@@ -61,3 +61,22 @@ def calcula_pontos_regra_simples(lista_dados_rodados):
         pontuação[face] += face
     
     return pontuação
+
+
+
+
+
+
+def calcula_pontos_soma(lista_dados_rolados):
+    soma_das_faces = 0
+
+    for i in range(len(lista_dados_rolados)):
+        soma_das_faces += lista_dados_rolados[i]
+
+    return soma_das_faces
+
+
+
+
+
+
