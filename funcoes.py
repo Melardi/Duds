@@ -99,7 +99,7 @@ def calcula_pontos_sequencia_baixa(lista_dados_rolados):
 
 
 def calcula_pontos_sequencia_alta(lista_dados_rolados):
-    sequencias = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6]]
+    sequencias = [[1, 2, 3, 4, 5], [2, 3, 4, 5, 6]]
 
     for seq in sequencias:
         contador = 0
