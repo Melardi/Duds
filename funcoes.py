@@ -174,6 +174,10 @@ def calcula_pontos_quina(dados_rolados):
     
     return 0
 
+
+
+
+
 def calcula_pontos_regra_avancada(dados_rolados):
     pontos = {
         'cinco_iguais': calcula_pontos_quina(dados_rolados),
@@ -185,3 +189,19 @@ def calcula_pontos_regra_avancada(dados_rolados):
     }
     
     return pontos
+
+
+
+
+def faz_jogada(dados, categoria, cartela): 
+
+    pontos_simples = calcula_pontos_regra_simples(dados)
+    pontos_avancados = calcula_pontos_regra_avancada(dados)
+
+    if categoria in pontos_simples:
+        cartela[categoria] = pontos_simples[categoria]
+
+    elif categoria in pontos_avancados:
+        cartela[categoria] = pontos_avancados[categoria]
+
+    return cartela
